@@ -9,4 +9,10 @@ ____________
 _____________
 --Another day feeling less anxious and more excited and more determined to finish this and move forward.
 ONE HOUR LATER...
---Deleting everything and restarting... 
+--Deleting everything and restarting...
+--Really funny moment for me going back through.. I hit a bug and used the class video to see what my bug was or if someone else experienced it...I made the exact same mistake in class (face palm).
+
+
+# June 6th
+_____________
+--
