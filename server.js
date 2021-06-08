@@ -11,6 +11,8 @@ const MONGODB_URI = process.env.MONGODB_URI
 app.use(express.json())
 
 const storeController = require('./controllers/store_controller.js')
+app.use(express.static('public'))
+app.use(express.json())
 app.use('/store', storeController)
 
 

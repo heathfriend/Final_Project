@@ -1,6 +1,7 @@
 const express = require('express')
 const store = express.Router()
 const Store = require('../models/store.js')
+const storeSeed = require('../models/store_seed.js')
 
 store.get('/', (req, res) => {
     Store.find({}, (err, foundStore) => {
@@ -13,6 +14,12 @@ store.post('/', (req, res) => {
         Store.find({}, (err, foundStore) => {
             res.json(foundStore)
         })
+    })
+})
+
+store.get('/seed', (req, res) => {
+    Store.insertMany(storeSeed, (err, manyStore) => {
+        res.redirect('/store')
     })
 })
 
@@ -31,5 +38,12 @@ store.put('/:id', (req, res) => {
 })
 
 
+store.delete('/:id', (req, res) => {
+    Store.findByIdAndRemove(req.params.id, (err, deletedStore) => {
+        Store.find({}, (err, foundStore) => {
+            res.json(foundStore)
+        })
+    })
+})
 
 module.exports = store
