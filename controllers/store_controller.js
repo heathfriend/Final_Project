@@ -3,6 +3,8 @@ const store = express.Router()
 const Store = require('../models/store.js')
 const storeSeed = require('../models/store_seed.js')
 
+
+
 store.get('/', (req, res) => {
     Store.find({}, (err, foundStore) => {
         res.json(foundStore)
