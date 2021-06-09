@@ -16,3 +16,12 @@ ONE HOUR LATER...
 # June 6th
 _____________
 --
+
+#June 7th
+--attempted a couple different things, broke my app deleted it, restarted...
+
+# June 8th
+--- Getting my butt kicked everywhere and not finding any success. Frustration and emotions are getting the best of me. I just keep making my situation worse and don't even realize it until its too late.
+
+# June 9th
+--toughest day. Got full crud again but cant deploy...Cant get materialize to connect... this is a mess and I just want to crawl up in a ball and quit. This is ridiculous. No idea why its this hard...
