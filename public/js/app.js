@@ -48,35 +48,39 @@ class App extends React.Component {
     render = () => {
         return (
             <div>
-                <h2>Add New Items</h2>
+                <h4 class="background blue darken-4 white-text">Add New Items</h4>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="item">Item</label>
+                    <label htmlFor="item" class="blue-text">Item</label>
                     <input type="text" id="item" onChange={this.handleChange} value={this.state.item}/>
                     <br/>
-                    <label htmlFor="image">Image</label>
+                    <label htmlFor="image" class="image blue-text">Image</label>
                     <input type="text" id="image"
                     onChange={this.handleChange} value={this.state.image}/>
                     <br/>
-                    <label htmlFor="price">Price</label>
+                    <label htmlFor="price" class="blue-text">Price</label>
                     <input type="text" id="price"
                     onChange={this.handleChange} value={this.state.price}/>
                     <br/>
                     <input type="submit" value="Add New Item" />
 
                 </form>
-                <h2>Inventory</h2>
+            
+
+                <h2 class="background yellow lighten-1 blue darken-text center-align">For Sale</h2>
                     <ul>
                         {this.state.stores.map((store) => {
                             return (
                                 <li key={store._id}>
                                     {store.item}<br/>
-                                    <img src={store.image} alt={store.item}
+                                    <img class="card-panel blue-grey darken-1" src={store.image}
+                                     alt={store.item}
                                      />
-                                     {store.price}
+                                     <br/>
+                                     ${store.price}
                                      <details>
-                                        <summary>Edit Item</summary>
+                                        <summary class="hoverable">Edit Item</summary>
                                         <form id={store._id} onSubmit={this.updateStore}>
-                                        <label htmlFor="item">Item</label>
+                                        <label htmlFor="item" class="white-text">Item</label>
                                         <br/>
                                         <input type="text" id="item" onChange={this.handleChange} />
                                         <br/>
@@ -92,13 +96,14 @@ class App extends React.Component {
                                         <br/>
                                         <input type="text" id="price" onChange={this.handleChange} />
                                         <br/>
-                                        <input type="submit" value="Update Item"/>
+                                        <input type="submit" value="Update Item" class="yellow lighten-1"/>
                                         </form>
                                      </details>
                                      <button value={store._id}
-                                     onClick={this.deleteStore}>
+                                     onClick={this.deleteStore} class="red darken-4 white-text">
                                      DELETE
                                      </button>
+                                     <button class="blue darken-4 white-text" value={store.id}>BUY</button>
                                 </li>
                             )
                         })}

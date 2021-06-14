@@ -25,3 +25,6 @@ _____________
 
 # June 9th
 --toughest day. Got full crud again but cant deploy...Cant get materialize to connect... this is a mess and I just want to crawl up in a ball and quit. This is ridiculous. No idea why its this hard...
+
+# June 10th
+-- FINALLY Materialize is connected and I can finally do something!!!
